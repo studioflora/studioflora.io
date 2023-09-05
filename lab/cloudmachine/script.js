@@ -12,7 +12,7 @@
     const artboard = document.querySelector('#artboard');
     const fs = document.querySelector('#fs');
 
-    let assetsPath = '/lab/cloudmachine/assets/'
+    let assetsPath = 'assets/'
 
     // initiate measurement
     // let fixedHeight;

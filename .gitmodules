@@ -1,0 +1,3 @@
+[submodule "cloudmachine"]
+	path = lab/cloudmachine
+	url = https://github.com/studioflora/cloudmachine

@@ -89,25 +89,25 @@ body {
 } */
 
 #ls0 {
-    background-image: url('../../lab/cloudmachine/assets/ls0.svg');
+    background-image: url('assets/ls0.svg');
 }
 
 #ls1 {
-    background-image: url('../../lab/cloudmachine/assets/ls1.svg');
+    background-image: url('assets/ls1.svg');
 }
 
 #ls2 {
-    background-image: url('../../lab/cloudmachine/assets/ls2.svg');
+    background-image: url('assets/ls2.svg');
     animation-duration: 70s;
 }
 
 #ls3 {
-    background-image: url('../../lab/cloudmachine/assets/ls3.svg');
+    background-image: url('assets/ls3.svg');
     animation-duration: 60s;
 }
 
 #ls4 {
-    background-image: url('../../lab/cloudmachine/assets/ls4.svg');
+    background-image: url('assets/ls4.svg');
     animation-duration: 40s;
 }
 
