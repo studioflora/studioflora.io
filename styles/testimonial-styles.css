@@ -1,0 +1,33 @@
+#testimonial-container {
+    display: flex;
+    gap: 20px;
+}
+
+#testimonial-container .testimonial {
+    flex: 1;
+    padding: 1em 2em;
+    border-radius: var(--borderRad);
+    background: var(--light);
+    font-size: 16px;
+    margin: 0;
+}
+
+.testimonial blockquote {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 0.5em 0 1em;
+    font-style: italic;
+}
+
+.testimonial figcaption {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media all and (max-width: 780px) {
+    #testimonial-container {
+        flex-direction: column;
+        margin-inline: -0.5rem;
+    }
+}
+

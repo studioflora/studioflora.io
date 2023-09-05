@@ -1,0 +1,53 @@
+#babysbreath .node div {
+    position: absolute;
+    bottom: 98%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    transform-origin: bottom center;
+}
+
+#babysbreath .segment {
+    animation: bb-wind 7s forwards infinite;
+}
+
+#babysbreath .node {
+    left: 0;
+    animation: none;
+}
+
+
+#babysbreath .gen0 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    font-size: 1.2em;
+}
+
+.plantcard img {
+    width: auto;
+    border-radius: 0;
+}
+
+.plantcard .viewport {
+    background: rgb(124, 169, 223);
+}
+
+@keyframes bb-wind {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(-01deg);
+    }
+    80% {
+        transform: rotate(0.25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

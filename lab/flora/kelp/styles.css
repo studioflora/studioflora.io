@@ -1,0 +1,88 @@
+#kelp .segment {
+    background: black;
+    position: absolute;
+    bottom: 99%;
+    /* outline: 1px solid yellow; */
+    animation: current 20s forwards infinite ease-out;
+    transform-origin: 50% 99%;
+}
+
+#kelp .gen0 {
+    animation-name: bottomcurrent;
+    animation-timing-function: ease-in-out;
+    outline: 10px solid blue;
+}
+
+#kelp .leaf {
+    position: absolute;
+    transform-origin: 0% 50%;
+    animation: leaf 20s forwards infinite ease-out;
+    left: 100%;
+    height: min-content;
+    max-height: none;
+    max-width: none;
+}
+
+#kelp .leaf use {
+    /* outline: 1px solid red; */
+    width: 100%;
+}
+
+#kelp .viewport {
+    background: #36669d;
+    overflow: hidden;
+}
+
+@keyframes current {
+    0% {
+        transform: rotate(-3deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-4deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes bottomcurrent {
+    0% {
+        transform: translate(-200%);
+    }
+    25% {
+        transform: translate(200%);
+    }
+    50% {
+        transform: translate(-300%);
+    }
+    75% {
+        transform: translate(100%);
+    }
+    100% {
+        transform: translate(-200%);
+    }
+}
+
+@keyframes leaf {
+    0% {
+        transform: rotateY(183deg) rotateZ(-40deg);
+    }
+    25% {
+        transform: rotateY(30deg) rotateZ(-40deg);
+    }
+    50% {
+        transform: rotateY(170deg) rotateZ(-40deg);
+    }
+    75% {
+        transform: rotateY(-3deg) rotateZ(-40deg);
+    }
+    100% {
+        transform: rotateY(183deg) rotateZ(-40deg);
+    }
+}

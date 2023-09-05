@@ -1,0 +1,96 @@
+#thyme .planter {
+    width: 20em;
+    height: 0;
+    position: absolute;
+    bottom: -0.25em;
+    left: calc(50% - 10em);
+}
+
+#thyme .stem {
+    position: absolute;
+    bottom: 95%;
+    width: 100%;
+    left: 0;
+    animation: thyme-wind 7s forwards infinite;
+}
+
+#thyme img {
+    height: 0;
+}
+
+#thyme .node {
+    animation: none;
+    height: 0;
+    bottom: 94%;
+    position: absolute;
+}
+
+#thyme .leaf {
+    transform-origin: bottom center;
+    position: absolute;
+    animation: leavesL 7s forwards infinite;
+    bottom: 100%;
+}
+
+#thyme .leaf:nth-last-of-type(even) {
+    animation-name: leavesR;
+}
+
+#thyme .viewport {
+    background: #e4e0ce;
+}
+
+@keyframes thyme-wind {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(0.5deg);
+    }
+    50% {
+        transform: rotate(-0.5deg);
+    }
+    80% {
+        transform: rotate(0.2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes leavesL {
+    0% {
+        transform: translateX(-50%) rotate(-30deg);
+    }
+    20% {
+        transform: translateX(-50%) rotate(-25deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(-33deg);
+    }
+    80% {
+        transform: translateX(-50%) rotate(-26deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(-30deg);
+    }
+}
+
+@keyframes leavesR {
+    0% {
+        transform: translateX(-50%) rotateY(180deg) rotateZ(-30deg);
+    }
+    20% {
+        transform: translateX(-50%) rotateY(170deg) rotateZ(-35deg);
+    }
+    50% {
+        transform: translateX(-50%) rotateY(190deg) rotateZ(-27deg);
+    }
+    80% {
+        transform: translateX(-50%) rotateY(175deg) rotateZ(-34deg);
+    }
+    100% {
+        transform: translateX(-50%) rotateY(180deg) rotateZ(-30deg);
+    }
+}
+

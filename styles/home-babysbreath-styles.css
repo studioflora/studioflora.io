@@ -1,0 +1,61 @@
+#babysbreath .node div {
+    position: absolute;
+    bottom: 98%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    transform-origin: bottom center;
+}
+
+#babysbreath .segment {
+    animation: bb-wind 7s forwards infinite;
+}
+
+#babysbreath .node {
+    left: 0;
+    animation: none;
+}
+
+#babysbreath .gen0 {
+    position: absolute;
+    font-size: 60%;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+#babysbreath img {
+    width: auto;
+    border-radius: 0;
+}
+
+#babysbreath {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+@media all and (max-width: 1024px) {
+    /* #babysbreath .gen0 {
+        font-size: 1.2vw;
+    } */
+}
+
+@keyframes bb-wind {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(-01deg);
+    }
+    80% {
+        transform: rotate(0.25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

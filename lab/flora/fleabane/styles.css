@@ -1,0 +1,76 @@
+#fleabane img {
+    height: 0;
+    width: auto;
+}
+
+#fleabane .segment, #fleabane .leaf {
+    position: absolute;
+    bottom: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    transform-origin: bottom center;
+    animation: wind 5s forwards infinite;
+}
+
+#fleabane .leaf {
+    animation-name: leaves;
+}
+
+#fleabane .node {
+    width: 0;
+    left: 0;
+    animation: none;
+    position: absolute;
+    bottom: 95%;
+}
+
+
+#fleabane .gen0 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    font-size: 1em;
+}
+
+#fleabane .viewport {
+    background: rgb(137, 200, 219);
+}
+
+@keyframes wind {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(-01deg);
+    }
+    80% {
+        transform: rotate(0.25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes leaves {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    80% {
+        transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

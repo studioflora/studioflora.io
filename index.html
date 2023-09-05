@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX7L2HHHNM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DX7L2HHHNM');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"> 
+
+    <!-- Theme settings -->
+    <meta name="theme-color" content="#131414">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#131414">
+    <meta name="msapplication-TileColor" content="#131414">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Stylesheets -->
+    <link href="/styles/styles.css" rel="stylesheet">
+    <link href="/styles/homestyles.css" rel="stylesheet">
+    <link href="/styles/gallerystyles.css" rel="stylesheet">
+    <link href="/styles/scroll-styles.css" rel="stylesheet">
+    <link href="/styles/text-animate-styles.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/scroll-script.js" defer></script>
+    <script src="/scripts/text-animate-script.js" defer></script>
+    
+    <!-- DM display -->
+    <link href="/styles/dm-display.css" rel="stylesheet">
+    <script src="/scripts/dm-header-script.js" defer></script>
+    <script src="/scripts/dm-wave.js" defer></script>
+
+    <!-- Plantcard -->
+    <link href="/lab/flora/plantcard-styles.css" rel="stylesheet">
+    <script src="/lab/flora/plantcard-script.js" defer></script>
+
+    <!-- Babysbreath -->
+    <link href="/lab/flora/babysbreath/styles.css" rel="stylesheet">
+    <script src="/lab/flora/babysbreath/script.js" defer></script>
+
+    <!-- Fleabane -->
+    <link href="/lab/flora/fleabane/styles.css" rel="stylesheet">
+    <script src="/lab/flora/fleabane/script.js" defer></script>
+
+    <!-- Seagrass -->
+    <link href="/lab/flora/seagrass/styles.css" rel="stylesheet">
+    <script src="/lab/flora/seagrass/script.js" defer></script>
+
+    <!-- Zinemachine -->
+    <link href="/lab/zinemachine/styles.css" rel="stylesheet">
+    <script src="/lab/zinemachine/script.js" defer></script>
+
+    <title>Studio Flora</title>
+</head>
+<body>
+    <!-- Universal nav -->
+    <nav>
+        <div class="nav-container">
+            <ul id="navbar">
+                <li><a href="/" class="logo">studio flora</a></li>
+                <li><a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/assets/sf-icons.svg#openmenu"/></svg></a></li>
+            </ul>
+            <ul  id="menu" class="closed">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
+                <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
+                <li><div class="button" id="menucontact"><a href="/contact"><svg><use href="/assets/sf-icons.svg#contact"/></svg>Contact</a></div></li>
+            </ul>
+        </div>
+        <div id="corners"><svg><use href="/assets/sf-icons.svg#corner"/></svg><svg><use href="/assets/sf-icons.svg#corner"/></svg></div>
+    </nav>
+    <!-- End universal nav -->
+    <main>
+        <section class="scroll-in grid" id="home-header">
+            <header class="medium">
+                <h2><span class="sf-text-wave slow-wave">Welcome to </span><span class="hidden">Studio Flora</span></h2>
+                <div class="dm-display"><h1 id="animated-header"></h1></div>
+                <h3 class="scroll-in">We are a small online studio exploring art, design, and code. Everything here is interactive, so click around and enjoy!</h3>
+            </header>  
+        </section>
+        <section class="grid">
+            <!-- Cloudmachine -->
+            <article class="wide">
+                <div id="cloudstack" class="dropshadow">
+                    <iframe src="/lab/cloudmachine/preview.html" title="cloudmachine"></iframe>
+                    <div class="button"><a href="/lab/cloudmachine/">Fullscreen<svg><use href="/assets/sf-icons.svg#arrow"/></svg></a></div>
+                </div>
+                <div class="caption">
+                    <h2>Cloudmachine</h2>
+                    <p>Tap to regenerate clouds!</p>
+                </div>
+            </article>
+            <!-- Babysbreath -->
+            <article class="narrow">
+                <div class="plantcard dropshadow" id="babysbreath">
+                    <div class="viewport">
+                        <div class="gen0 stage1"></div>
+                    </div>
+                    <h2>Baby's-breath</h2>
+                </div>
+            </article>
+            <!-- Fleabane -->
+            <article class="narrow">
+                <div class="plantcard dropshadow" id="fleabane">
+                    <div class="viewport">
+                        <div class="gen0"></div>
+                    </div>
+                    <h2>Fleabane</h2>
+                </div>
+            </article>
+            <!-- Seagrass -->
+            <article class="narrow">
+                <div class="plantcard dropshadow" id="seagrass">
+                    <div class="viewport">
+                        <div class="planter"></div>
+                    </div>
+                    <h2>Seagrass</h2>
+                </div>
+                <div class="caption">
+                    <h2>Plant animations</h2>
+                    <p>Tap to regenerate!</p>
+                </div>
+            </article>
+            <!-- Timer -->
+            <article class="narrow dropshadow" id="timer">
+                <a href="/tools/timer">
+                    <img src="/tools/timer/assets/timer.svg" width="200px">
+                    <div class="caption">
+                        <div class="link">
+                            <h2>Zen Timer</h2>
+                            <svg><use href="/assets/sf-icons.svg#arrow"/></svg>
+                        </div>
+                        <p>Tap to launch timer</p>
+                    </div>
+                </a>
+            </article>
+            <!-- Zinemachine -->
+            <article class="narrow">
+                <div class="zine" id="zinemachine">
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/00.png">
+                    </div>
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/01.png">
+                    </div>
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/02.png">
+                    </div>
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/03.png">
+                    </div>
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/04.png">
+                    </div>
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/05.png">
+                    </div>
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/06.png">
+                    </div>
+                    <div class="page">
+                        <div class="shadow"></div>
+                        <img src="/lab/zinemachine/pages/07.png">
+                    </div>
+                </div>
+                <div class="caption">
+                    <h2>Digital Zine concept</h2>
+                    <p>Tap pages to flip through!</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- Universal footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="grid">
+                <article class="scroll-in wide">
+                    <a href="/" id="monogram-footer"><div class="dmw-display"></div></a>
+                </article>
+            </section>
+            <section class="scroll-in full" id="footer-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <ul id="copywright">
+                    <li class="hide-m">—</li>
+                    <li><a href="/">Studio Flora © 2023</a></li>
+                    <li class="hide-m">—</li>
+                </ul>
+                <ul>
+                    <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
+                    <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <!-- End universal footer -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+.dm-display {
+    /* margin-top: 0.1em; */
+    margin-left: 0.1em;
+    display: flex;
+}
+
+.dm-display h1 {
+    display: none;
+}
+
+.dm-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.dm-cell {
+    width: 0.055em;
+    height: 0.055em;
+}
+
+.dm-dot {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background: var(--text);
+    transition: opacity 100ms;
+    opacity: 0;
+}
+
+.dm-dot.active {
+    opacity: 1;
+}
+
+/* DM-Wave styles */
+
+#monogram-footer {
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    width: 100%;
+    min-height: 100%;
+    max-width: 20em;
+}
+
+.dmw-display {
+    display: flex;
+    width: 100%;
+    max-height: 100%;
+    margin-inline: auto;
+    align-items: center;
+    padding: 1em;
+}
+
+.dmw-display .dm-cell, .dmw-display .dm-dot {
+    animation-name: cell-wave;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.dmw-display .dm-col {
+    width: 100%;
+}
+
+.dmw-display .dm-cell {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+.dmw-display .dm-dot {
+    animation-name: dot-wave;
+    background: var(--navText);
+    height: 86%;
+    width: 86%;
+}
+
+@keyframes cell-wave {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes dot-wave {
+    from {
+        transform: translateX(-6px);
+    }
+    to {
+        transform: translateX(6px);
+    }
+}

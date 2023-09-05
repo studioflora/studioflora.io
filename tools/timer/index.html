@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX7L2HHHNM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DX7L2HHHNM');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"> 
+
+    <!-- Theme settings -->
+    <meta name="theme-color" content="#131414">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#131414">
+    <meta name="msapplication-TileColor" content="#131414">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Favicon *UNIQUE FOR TIMER* -->
+    <link id="favicon" rel="shortcut icon" type="image/png" href="assets/favicons/0-0.png" />
+
+
+    <!-- Stylesheets -->
+    <link href="/styles/styles.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="/scripts/script.js" defer></script>
+
+    <!-- Timer -->
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+    <title>Timer | SF Lab</title>
+</head>
+<body>
+    <!-- Universal nav -->
+    <nav>
+        <div class="nav-container">
+            <ul id="navbar">
+                <li><a href="/" class="logo">studio flora</a></li>
+                <li><a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/assets/sf-icons.svg#openmenu"/></svg></a></li>
+            </ul>
+            <ul  id="menu" class="closed">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
+                <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
+                <li><div class="button" id="menucontact"><a href="/contact"><svg><use href="/assets/sf-icons.svg#contact"/></svg>Contact</a></div></li>
+            </ul>
+        </div>
+        <div id="corners"><svg><use href="/assets/sf-icons.svg#corner"/></svg><svg><use href="/assets/sf-icons.svg#corner"/></svg></div>
+    </nav>
+    <main>
+        <div id="timer" class="cp-wrapper">           
+            <h1 class="cp-header">Timer</h1>
+            <div class="cp">
+                <form id="counter" class="flex" autocomplete="off">
+                    <img id="counter-img" src="assets/favicons/0-0.png">
+                    <div class="counter-input-wrapper">
+                        <div id="hrs">
+                            <input type="text" class="counter-input" id="hrs-input" pattern="[0-9]*$" oninvalid="this.setCustomValidity('Please enter numbers only')"
+                            oninput="this.setCustomValidity('')">
+                            <label class="counter-label" for="hrs" id="hrs-label">h</label>
+                        </div>
+                        <div id="mins">
+                            <input type="text" class="counter-input" id="mins-input" pattern="[0-9]*$" oninvalid="this.setCustomValidity('Please enter numbers only')"
+                            oninput="this.setCustomValidity('')">
+                            <label class="counter-label" for="mins" id="mins-label">m</label>
+                        </div>
+                    </div>
+                    <input type="submit" hidden>
+                </form>
+                <div class="flex">
+                    <div class="btn btn_icon btn_blue btn_large" id="reset"><svg><use href="../../assets/sf-icons.svg#reset-arrow" /></svg></div>
+                    <div class="btn btn_blue btn_span btn_large" id="start">start</div>
+                </div>
+            </div>
+            <div class="button" id="help">?</div>
+        </div> 
+        <div id="timer-info">
+            <p>I built this timer to fulfill one specific need: to be as low-stress as possible.</p>
+            <p>The visual indicator purposefully doesn't show the exact remaining time, and the alarm sound is a gentle cricket chirp and not a startling beep.</p>
+            <p>Also, the indicator works in the tab, so you can see it from other webpages.</p>
+        </div>
+    </main>
+</body>
+</html>

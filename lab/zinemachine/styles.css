@@ -1,0 +1,75 @@
+.zine {
+    perspective: inherit;
+    position: relative;
+    width: 100%;
+    filter: drop-shadow(5px 10px 5px #1c1c194b);
+    perspective: 2500px;
+    perspective-origin: center center;
+    margin-bottom: 1.5em;
+}
+
+#zinemachine {
+    height: fit-content;
+}
+
+.zine .page {
+    backface-visibility: hidden;
+    height: fit-content;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+    padding: 0;
+    transform-origin: left;
+    transition: transform 400ms;
+    transition-timing-function: ease-in-out;
+    background: #f4f3ef;
+    border-right: 0.1px solid white;
+    box-shadow: inset -20px 0 20px -10px #1c1c190f, -20px 10px 20px -20px #1c1c1931;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.zine .page:nth-child(even) {
+    transform-origin: right;
+    left: auto;
+    right: 50%;
+    border-right: none;
+    border-left: 0.1px solid white;
+}
+
+.zine .page:nth-child(odd) {
+    box-shadow: inset 10px 0 10px -5px #fefffead, 20px 10px 20px -20px #1c1c1931;
+}
+
+.zine .page img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.zine .shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.zine .page:nth-child(odd) .shadow {
+    box-shadow: inset 20px 0 20px -10px #fefffe2f;
+    mix-blend-mode: lighten;
+}
+
+.zine .page:nth-child(even) .shadow {
+    box-shadow: inset -20px 0 20px -10px #1a191c0d;
+    mix-blend-mode: multiply;
+}
+
+@media all and (max-width: 1024px) {  
+    .zine {
+        perspective: 1500px;
+    }
+}

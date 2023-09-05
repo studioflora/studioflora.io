@@ -1,0 +1,29 @@
+@font-face {
+    font-family: ao-01;
+    src: url(/lab/assets/custom-fonts/ao-01-Regular.woff2) format("woff2"),
+         url(/lab/assets/custom-fonts/ao-01-Regular.woff) format("woff"),
+         url(/lab/assets/custom-fonts/ao-01-Regular.otf) format("opentype");
+}
+
+.plantcard {
+    box-sizing: border-box;
+    width: 100%;
+    height: 57.5em;
+    margin: 0 auto 0.75em;
+    background: rgb(248, 248, 248);
+    font-size: 14px;
+    font-family: 'ao-01', sans-serif;
+    padding: 1.5em;
+}
+
+.plantcard .viewport {
+    width: 47em;
+    height: 47em;
+    position: relative;
+}
+
+.plantcard h2 {
+    font-size: 3.25em;
+    margin: 0.7em 0.3em 0;
+    line-height: normal;
+}
