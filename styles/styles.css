@@ -20,12 +20,12 @@ body {
     font-style: normal;
     background: var(--bg);
     color: var(--text);
+    width: 100%;
 }
 
 main, nav {
-    box-sizing: border-box;
     background: var(--canvas);
-    width: 100vw;
+    width: 100%;
 }
 
 nav {
@@ -51,8 +51,6 @@ nav.collapsed {
 .nav-container {
     display: flex;
     justify-content: space-between;
-    margin-inline: auto;
-    width: 100%;
 }
 
 #navbar {
