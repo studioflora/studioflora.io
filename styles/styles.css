@@ -50,6 +50,7 @@ nav.collapsed {
 
 .nav-container {
     display: flex;
+    position: relative;
     justify-content: space-between;
 }
 
@@ -148,22 +149,23 @@ svg {
     justify-content: center;
 }
 
-#corners {
-    position: absolute;
-    bottom: 0;
-    transform: translateY(var(--borderRad));
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-#corners svg {
-    height: var(--borderRad);
-    width: var(--borderRad);
+.corner {
     max-height: none;
     max-width: none;
+    height: var(--borderRad);
+    width: var(--borderRad);
+    position: absolute;
+    top: 100%;
     fill: var(--bg);
-    transition: all 250ms;
+}
+
+#top-left-corner {
+    left: 0;
+}
+
+#top-right-corner {
+    right: 0;
+    transform: rotate(90deg);
 }
 
 #corners svg:last-of-type {
