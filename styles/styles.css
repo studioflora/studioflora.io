@@ -25,7 +25,6 @@ body {
 
 main, nav {
     background: var(--canvas);
-    width: 100%;
 }
 
 nav {
