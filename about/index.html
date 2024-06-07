@@ -32,43 +32,19 @@
 
     <!-- Stylesheets -->
     <link href="/styles/styles.css" rel="stylesheet">
+    <link href="/styles/dm-display.css" rel="stylesheet">
     <link href="/styles/scroll-styles.css" rel="stylesheet">
-    <link href="/styles/testimonial-styles.css" rel="stylesheet">
+    <link href="/styles/text-animate-styles.css" rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/components.js" defer></script>
     <script src="/scripts/scroll-script.js" defer></script>
-
-    <!-- DM display -->
-    <link href="/styles/dm-display.css" rel="stylesheet">
-    <script src="/scripts/dm-wave.js" defer></script>
-
-    <!-- Text wave -->
-    <link href="/styles/text-animate-styles.css" rel="stylesheet">
     <script src="/scripts/text-animate-script.js" defer></script>
 
     <title>About | Studio Flora</title>
 </head>
 <body>
-    <!-- Universal nav -->
-    <nav>
-        <div class="nav-container">
-            <ul id="navbar">
-                <li><a href="/" class="logo">studio flora</a></li>
-                <li><a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/assets/sf-icons.svg#openmenu"/></svg></a></li>
-            </ul>
-            <ul  id="menu" class="closed">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
-                <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
-                <li><div class="button" id="menucontact"><a href="/contact"><svg><use href="/assets/sf-icons.svg#contact"/></svg>Contact</a></div></li>
-            </ul>
-        </div>
-        <svg class="corner" id="top-left-corner"><use href="/assets/sf-icons.svg#corner"/></svg>
-        <svg class="corner" id="top-right-corner"><use href="/assets/sf-icons.svg#corner"/></svg>
-    </nav>
-    <!-- End universal nav -->
+    <nav-bar></nav-bar>
     <main>
         <section class="grid">
             <figure class="narrow scroll-in">
@@ -80,39 +56,10 @@
                 <p>Please enjoy your stay, and check back soon for more :&#41;</p>
             </article>
             <article class="narrow scroll-in">
-                <h2>Like what you see?</h2>
-                <p class="text-balance">Need some Studio Flora magic for your own project or brand? Don't hesitate to reach out!</p>
                 <div class="button"><a href="/contact"><svg><use href="/assets/sf-icons.svg#contact"/></svg>Contact</a></div>
             </article>
         </section>
     </main>
-    <!-- Universal footer -->
-    <footer>
-        <div class="footer-content">
-            <section class="grid">
-                <article class="scroll-in wide">
-                    <a href="/" id="monogram-footer"><div class="dmw-display"></div></a>
-                </article>
-            </section>
-            <section class="scroll-in full" id="footer-nav">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-                <ul id="copywright">
-                    <li class="hide-m">—</li>
-                    <li><a href="/">Studio Flora v2.2.2 © 2024</a></li>
-                    <li class="hide-m">—</li>
-                </ul>
-                <ul>
-                    <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
-                    <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
-                    <li><a href="https://github.com/studioflora"><svg><use href="/assets/sf-icons.svg#github"/></svg></a></li>
-                </ul>
-            </section>
-        </div>
-    </footer>
-    <!-- End universal footer -->
+    <footer-bar></footer-bar>
 </body>
 </html>
