@@ -24,10 +24,11 @@ class Navbar extends HTMLElement {
                      <li><a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/assets/sf-icons.svg#openmenu"/></svg></a></li>
                   </ul>
                   <ul id="menu" class="closed">
-                     <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
-                     <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
-                     <li><a href="/">Home</a></li>
+                     <li><a href="/tools">Tools</a></li>
+                     <li><a href="/">Gallery</a></li>
                      <li><a href="/about">About</a></li>
+                     <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
+                     <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
                   </ul>
             </div>
             <svg class="corner" id="top-left-corner"><use href="/assets/sf-icons.svg#corner"/></svg>
@@ -38,7 +39,7 @@ class Navbar extends HTMLElement {
 
    connectedCallback() {
       const main = document.querySelector('main');
-      const footer = document.querySelector('footer');
+      const footer = document.querySelector('footer-bar');
       const menu = document.querySelector('#menu');
       const menuLis = document.querySelectorAll('#menu li').length;
       const toggleMenu = document.querySelector('#toggle-menu');

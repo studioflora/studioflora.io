@@ -9,10 +9,14 @@
 }
 
 #timer img {
-    border-radius: 15px;
+    border-radius: 0;
     width: 300px;
 }
 
 #timer {
     text-align: center;
+}
+
+#timer p {
+    text-align: left;
 }
