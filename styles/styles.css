@@ -5,8 +5,8 @@
     --light: #f5f8fa;
     --navText: var(--canvas);
     --navBg: var(--bg);
-    --accent1: #00AFD6;
-    --accent2: #1292c0;
+    --accent1: #02c4ef;
+    --accent2: #017cc3;
     --borderRad: 1em;
     --marginBot: 1.5px;
     --barHeight: 2.5em;
@@ -51,7 +51,7 @@ nav.collapsed {
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding-inline: 0.25em 0.5em;
+    padding-right: 0.5em;
 }
 
 #navbar {
@@ -563,12 +563,12 @@ footer ul {
         transition: background-color 300ms;
     }
 
-    #menu a:hover, a:active {
-        color: var(--accent2);
+    /* #menu a:hover, #menu a:active {
+        color: var(--accent1);
     }
 
-    #menucontact:hover a {
-        color: var(--text);
+    a:hover * {
+        color: var(--accent2);
     }
 
     a:hover svg, a:active svg {
@@ -581,6 +581,22 @@ footer ul {
 
     :not(main) a:hover svg, :not(main) a:active svg {
         fill: var(--accent1);
+    } */
+
+    a:hover {
+        color: var(--accent1);
+    }
+
+    a:hover svg {
+        fill: var(--accent1)
+    }
+
+    main a:hover {
+        color: var(--accent2);
+    }
+
+    main a:hover svg {
+        fill: var(--accent2)
     }
 
     .button:hover {
