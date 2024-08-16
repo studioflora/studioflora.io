@@ -22,7 +22,7 @@
     width: 95%;
     height: 95%;
     border-radius: 50%;
-    background: var(--text);
+    background: var(--fg-0);
     transition: opacity 100ms;
     opacity: 0;
 }
@@ -71,7 +71,7 @@
 
 .dmw-display .dm-dot {
     animation-name: dot-wave;
-    background: var(--navText);
+    background: var(--fg-0);
     height: 86%;
     width: 86%;
 }

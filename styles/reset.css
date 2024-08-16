@@ -1,0 +1,42 @@
+/*
+   SF-Styles reset
+   By Studio Flora
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+html {
+   /* Set default document color scheme based on system preference */
+    color-scheme: dark light;
+}
+
+body {
+    min-height: 100vh;
+}
+
+input, button {
+   background-color: inherit;
+   color: inherit;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+iframe, button {
+    border: 0;
+}
+
+ul {
+    list-style: none;
+}

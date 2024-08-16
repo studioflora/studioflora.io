@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"> 
+
+    <!-- Theme settings -->
+    <meta name="theme-color" content="#080e0c">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#080e0c">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Stylesheets -->
+    <link href="/styles/reset.css" rel="stylesheet">
+    <link href="/styles/sf-styles.css" rel="stylesheet">
+    <link href="/styles/dm-display.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="/scripts/components.js" defer></script>
+    <script src="/scripts/scroll-script.js" defer></script>
+    <script src="/scripts/text-animate-script.js" defer></script>
+
+    <!-- End universal header -->
+
+   <title>Styleguide | Studio Flora</title>
+</head>
+<body>
+    <nav-bar></nav-bar>
+    <main class="flex column spaced">
+        <section class="grid">
+            <header class="grid-6">
+               <h1>SF-Styles Guide</h1>
+               <p>This is a base styleguide for studioflora.io pages and tools. It is designed for rapid prototyping with flex and a 12-col grid.</p>
+            </header>
+         </section>
+         <section class="grid">
+            <article>
+               <h4 class="caps">swatches</h4>
+            </article>
+            <article class="darkmode grid-palette">
+               <div class="swatch" style="background: var(--dark-base-0);">
+                  <p>--dark-base-0</p>
+               </div>
+               <div class="swatch" style="background: var(--dark-base-1);">
+                  <p>--dark-base-1</p>
+               </div>
+               <div class="swatch" style="background: var(--dark-base-2);">
+                  <p>--dark-base-2</p>
+               </div>
+               <div class="swatch" style="background: var(--dark-base-3);">
+                  <p>--dark-base-3</p>
+               </div>
+               <div class="swatch" style="background: var(--dark-base-4);">
+                  <p>--dark-base-4</p>
+               </div>
+               <div class="swatch" style="background: var(--dark-accent-0);">
+                  <p>--dark-accent-0</p>
+               </div>
+               <div class="swatch" style="background: var(--dark-accent-1);">
+                  <p>--dark-accent-1</p>
+               </div>
+            </article>
+            <article class="grid-palette">
+               <div class="swatch" style="background: var(--light-base-0);">
+                  <p>--light-base-0</p>
+               </div>
+               <div class="swatch" style="background: var(--light-base-1);">
+                  <p>--light-base-1</p>
+               </div>
+               <div class="swatch" style="background: var(--light-base-2);">
+                  <p>--light-base-2</p>
+               </div>
+               <div class="swatch" style="background: var(--light-base-3);">
+                  <p>--light-base-3</p>
+               </div>
+               <div class="swatch" style="background: var(--light-base-4);">
+                  <p>--light-base-4</p>
+               </div>
+               <div class="swatch" style="background: var(--light-accent-0);">
+                  <p>--light-accent-0</p>
+               </div>
+               <div class="swatch" style="background: var(--light-accent-1);">
+                  <p>--light-accent-1</p>
+               </div>
+            </article>
+         </section>
+         <section class="grid">
+            <article>
+               <h4 class="caps">Text Styles</h4>
+               <h1>Heading 1</h1>
+               <h2>Heading 2</h2>
+               <h3>Heading 3</h3>
+               <h4>Heading 4</h4>
+               <h5>Heading 5</h5>
+               <h6>Heading 6</h6>
+               <p>Trains significantly enhance global connectivity and economic efficiency by providing reliable and sustainable transportation for people and goods. Their lower carbon footprint compared to cars and planes contributes to environmental preservation, while their ability to reduce traffic congestion and improve urban mobility promotes more livable cities.</p>
+               <div class="flex">
+                  <button class="strong">Button</button>
+                  <button>Button<svg><use href="/assets/sf-icons.svg#contact"/></svg></button>
+                  <button class="outlined">.outlined</button>
+                  <button class="bg-accent">.bg-accent</button>
+               </div>
+               <div class="flex">
+                  <a href="#">Link</a>
+                  <a href="#">Link<svg><use href="/assets/sf-icons.svg#contact"/></svg></a>
+               </div>
+            </article>
+            <article class="column">
+               <h4 class="caps">Flex</h4>
+               <ul class="flex bg-2">
+                  <li>.flex</li>
+                  <li>.flex</li>
+                  <li>.flex</li>
+               </ul>
+               <ul class="flex-spread bg-2">
+                  <li>.flex-spread</li>
+                  <li>.flex-spread</li>
+                  <li>.flex-spread</li>
+               </ul>
+               <ul class="flex-space bg-2">
+                  <li>.flex-space</li>
+                  <li>.flex-space</li>
+                  <li>.flex-space</li>
+               </ul>
+               <ul class="flex-center bg-2">
+                  <li>.flex-center</li>
+                  <li>.flex-center</li>
+                  <li>.flex-center</li>
+               </ul>
+            </article>
+         </section>
+         <section class="grid">
+            <h4 class="caps">Grid</h4>
+            <p class="grid-12 bg-accent padding">.grid-12 (full)</p>
+            <p class="bg-accent padding">.grid-8 (default)</p>
+            <p class="grid-6 bg-accent padding">.grid-6</p>
+            <p class="grid-4 bg-accent padding">.grid-4</p>
+            <p class="grid-2 bg-accent padding">.grid-2</p>
+        </section>
+    </main>
+    <footer-bar></footer-bar>
+</body>
+</html>

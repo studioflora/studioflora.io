@@ -168,10 +168,6 @@ svg {
     transform: rotate(90deg);
 }
 
-#corners svg:last-of-type {
-    transform: rotateZ(90deg);
-}
-
 ul {
     list-style-type: none;
     padding: 0;

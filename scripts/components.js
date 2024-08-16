@@ -17,20 +17,17 @@ class Navbar extends HTMLElement {
    constructor() {
       super();
       this.innerHTML = `
-         <nav>
-            <div class="nav-container">
-                  <ul id="navbar">
-                     <li><a href="/" class="logo">studio flora</a></li>
-                     <li><a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/assets/sf-icons.svg#openmenu"/></svg></a></li>
-                  </ul>
-                  <ul id="menu" class="closed">
-                     <li><a href="/tools">Tools</a></li>
-                     <li><a href="/">Gallery</a></li>
-                     <li><a href="/about">About</a></li>
-                     <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
-                     <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
-                  </ul>
-            </div>
+         <nav class="darkmode flex-spread dropshadow padding">
+            <a href="/" class="logo"><i>studio flora</i></a>
+            <ul id="menu" class="flex closed">
+               <li><a href="/tools">Tools</a></li>
+               <li><a href="/">Gallery</a></li>
+               <li><a href="/about">About</a></li>
+               <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
+               <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
+            </ul>
+            <a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/assets/sf-icons.svg#openmenu"/></svg></a>
+
             <svg class="corner" id="top-left-corner"><use href="/assets/sf-icons.svg#corner"/></svg>
             <svg class="corner" id="top-right-corner"><use href="/assets/sf-icons.svg#corner"/></svg>
          </nav>
@@ -84,31 +81,27 @@ class FooterBar extends HTMLElement {
    constructor() {
       super();
       this.innerHTML = `
-         <footer>
-            <div class="footer-content">
-                  <section class="grid">
-                     <article class="scroll-in wide">
-                        <a href="/" id="monogram-footer"><div class="dmw-display"></div></a>
-                     </article>
-                  </section>
-                  <section class="scroll-in full" id="footer-nav">
-                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                     </ul>
-                     <ul id="copywright">
-                        <li class="hide-m">—</li>
-                        <li><a href="/">Studio Flora © 2024</a></li>
-                        <li class="hide-m">—</li>
-                     </ul>
-                     <ul>
-                        <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
-                        <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
-                        <li><a href="https://github.com/studioflora"><svg><use href="/assets/sf-icons.svg#github"/></svg></a></li>
-                     </ul>
-                  </section>
-            </div>
+         <footer class="darkmode flex column">
+            <section class="scroll-in grid">
+               <a href="/" class="grid-4 spaced" id="monogram-footer"><div class="dmw-display"></div></a>
+            </section>
+            <nav class="scroll-in flex-center">
+               <ul class="flex">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/contact">Contact</a></li>
+               </ul>
+               <ul class="flex">
+                  <li class="hide-mobile">—</li>
+                  <li><a href="/">Studio Flora © 2024</a></li>
+                  <li class="hide-mobile">—</li>
+               </ul>
+               <ul class="flex">
+                  <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg></a></li>
+                  <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/assets/sf-icons.svg#instagram"/></svg></a></li>
+                  <li><a href="https://github.com/studioflora"><svg><use href="/assets/sf-icons.svg#github"/></svg></a></li>
+               </ul>
+            </nav>
          </footer>
       `
    }

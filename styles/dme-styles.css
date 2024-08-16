@@ -1,0 +1,471 @@
+/* --dme-fg: #000000;
+   --dme-bg: #ffffff;
+   --dme-bg-1: #f9fbf9;
+   --dme-bg-2: #edf0ed;
+   --dme-bg-3: #86ddc2;
+   --dme-active: #3f7cec;
+   --dme-highlight: #3f7cec; */
+
+:root {
+   /* GLOBAL STYLES */
+
+   /* Color swatches */
+   --swatch-dark-0: #080e0c;
+   --swatch-dark-1: #0f1413;
+   --swatch-dark-2: #161a19;
+   --swatch-dark-3: #202b28;
+   --swatch-dark-4: #414846;
+
+   --swatch-light-0: #f9fbf9;
+   --swatch-light-1: #edf0ed;
+   --swatch-light-2: #bfe7db;
+   --swatch-light-3: #86ddc2;
+
+   --swatch-highlight-0: #3f7cec;
+   --swatch-highlight-1: #dfff10;
+
+   /* Border settings */
+   --border: 0.08rem solid var(--dme-bg-2);
+   --border-radius: 0.08rem;
+
+   /* 
+    COLOR GUIDE
+    fg  (highest contrast): default text color
+    fg-1 (medium contrast): accent color
+    fg-2 (lowest contrast):    
+
+    bg  (highest contrast): default background
+    bg-1 (medium contrast): 
+    bg-2 (lowest contrast): borders
+
+    highlight: to indicate selected/active objects
+   */
+
+   /* Default theme */
+   --dme-fg: var(--swatch-dark-0);
+   --dme-fg-1: var(--swatch-dark-1);
+   --dme-fg-2: var(--swatch-dark-2);
+
+   --dme-bg: var(--swatch-light-0);
+   --dme-bg-1: var(--swatch-light-1);
+   --dme-bg-2: var(--swatch-light-2);
+
+   --dme-highlight: var(--swatch-highlight-0);
+}
+
+/* Alternate color scheme 1 */
+.scheme-1, .scheme-1 * {
+   --dme-fg: var(--swatch-dark-0);
+   --dme-fg-1: var(--swatch-dark-2);
+   --dme-fg-2: var(--swatch-dark-3);
+
+   --dme-bg: var(--swatch-light-0);
+   --dme-bg-1: var(--swatch-light-2);
+   --dme-bg-2: var(--swatch-light-3);
+
+   /* --dme-highlight: var(--swatch-highlight-1); */
+}
+
+/* Darkmode default */
+:root.darkmode {
+   --dme-fg: var(--swatch-light-0);
+   --dme-fg-1: var(--swatch-light-1);
+   --dme-fg-2: var(--swatch-light-2);
+
+   --dme-bg: var(--swatch-dark-0);
+   --dme-bg-1: var(--swatch-dark-1);
+   --dme-bg-2: var(--swatch-dark-3);
+
+   --dme-highlight: var(--swatch-highlight-1);
+}
+
+/* Darkmode alternate color scheme 1 */
+.darkmode .scheme-1, .darkmode .scheme-1 * {
+   --dme-fg: var(--swatch-light-0);
+   --dme-fg-1: var(--swatch-light-1);
+   --dme-fg-2: var(--swatch-light-2);
+
+   --dme-bg: var(--swatch-dark-2);
+   --dme-bg-1: var(--swatch-dark-0);
+   --dme-bg-2: var(--swatch-dark-3);
+
+   /* --dme-highlight: var(--swatch-highlight-1); */
+}
+
+body {
+   font-family: 'Inter', sans-serif;
+   font-weight: 400;
+   background: var(--dme-bg);
+   color: var(--dme-fg);
+   overflow: hidden;
+}
+
+main {
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+   display: grid;
+   grid-template-columns: 1fr 2fr 16em;
+   grid-template-rows: 100vh;
+   grid-template-areas:
+      "tc ep cp";
+}
+
+.material-symbols-outlined {
+   font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48;
+   vertical-align: -11.5%;
+   font-size: 1.25rem;
+}
+
+.material-symbols-outlined.filled {
+   font-variation-settings:
+      'FILL' 1
+}
+
+button, input[type="submit"] {
+   background-color: transparent;
+   border: none;
+   border-radius: var(--border-radius);
+
+   /* font-size: 1.25rem; */
+   font-weight: 300;
+   height: 2rem;
+   min-width: 2rem;
+   width: auto;
+   padding-inline: 0.25em;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.3em;
+
+   transition: opacity 200ms ease-in-out;
+}
+
+button.inline, input[type="submit"].inline {
+   height: 1.5em;
+   min-width: 1.5em;
+}
+
+button .material-symbols-outlined, input[type="submit"] .material-symbols-outlined {
+   font-size: 1.25rem;
+}
+
+button.inline .material-symbols-outlined, input[type="submit"].inline .material-symbols-outlined {
+   font-size: 1rem;
+   font-weight: 400;
+}
+
+button .button-text {
+   font-size: 1rem;
+   font-weight: 400;
+}
+
+.button-group {
+   display: flex;
+   gap: 0.5em;
+   align-items: center;
+}
+
+button.round {
+   border-radius: 50%;
+}
+
+button.selected, input[type="submit"].selected {
+   background-color: var(--dme-bg-2);
+}
+
+button.highlighted, input[type="submit"].highlighted {
+   background-color: var(--dme-highlight);
+   color: var(--dme-bg);
+   font-weight: 500;
+}
+
+button.disabled, button:disabled {
+   opacity: 0.2;
+}
+
+input:not([type="range"]):not([type="submit"]) {
+   padding: 0.1em 0.25em;
+   background-color: var(--dme-bg-1);
+   border: 1px solid var(--dme-bg-2);
+   border-radius: var(--border-radius);
+}
+
+.flex {
+   display: flex;
+   gap: 0.75em;
+   max-width: 100%;
+}
+
+.flex.condensed {
+   gap: 0;
+}
+
+.flex.column {
+   flex-direction: column;
+   align-items: stretch;
+}
+
+.flex.spread {
+   justify-content: space-between;
+}
+
+.flex.space {
+   justify-content: space-evenly;
+}
+
+.flex.center {
+   justify-content: center;
+   align-items: center;
+}
+
+.flex.stretch {
+   justify-content: stretch;
+}
+
+.padded {
+   padding: 0.75rem;
+}
+
+.divided > * {
+   border-right: var(--border);
+}
+
+.divided > *:last-child {
+   border-right: none;
+}
+
+.column.divided > * {
+   border-bottom: var(--border);
+   border-right: none;
+}
+
+.column.divided > *:last-child {
+   border-bottom: none;
+}
+
+section {
+   background-color: var(--dme-bg);
+}
+
+article {
+   padding: 1em;
+   gap: 1rem;
+   border-bottom: var(--border);
+}
+
+.no-border {
+   border: none;
+}
+
+article:last-of-type {
+   border-bottom: none;
+}
+
+h3, h1, label {
+   font-weight: 500;
+   font-size: 0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.float {
+   position: absolute;
+   top: 1rem;
+   left: 1rem;
+}
+
+#char-sizing input[type="text"] {
+   width: 1.85em;
+}
+
+.charset-grid {
+   flex-wrap: wrap;
+   width: 100%;
+   gap: 0.8em 0.4em;
+}
+
+.charset p {
+   border: var(--border);
+   width: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#edit-panel {
+   grid-area: ep;
+   position: relative;
+}
+
+#edit-panel h1 {
+   text-align: center;
+}
+
+.hidden {
+   display: none;
+}
+
+input.hidden {
+   position: absolute;
+   top: -9999px;
+   opacity: 0;
+}
+
+/* .startup is used to show/hide elements during the startup state */
+
+.startup #type-case div {
+   opacity: 0.7;
+}
+
+.hide-height-startup {
+   transition: 
+      height 200ms ease-in-out;
+}
+
+.startup .hide-height-startup {
+   height: 0em;
+   padding: 0;
+   border: none;
+}
+
+.hide-width-startup, .startup .show-width-startup {
+   transition: 
+      width 200ms ease-in-out;
+}
+
+.startup .hide-width-startup, .show-width-startup {
+   width: 0em;
+   padding: 0;
+}
+
+:not(.startup) .show-startup {
+   display: none;
+}
+
+.startup .hide-startup {
+   display: none;
+}
+
+.startup .show-startup {
+   display: block;
+}
+
+.startup .transparent-startup {
+   opacity: 0;
+}
+
+#canvas-container {
+   height: 60vh;
+}
+
+#canvas-container svg {
+   width: 100%;
+   height: 100%;
+}
+
+#clipboard canvas {
+   height: 4rem;
+}
+
+#control-panel {
+   grid-area: cp;
+}
+
+#control-panel button.selected, #control-panel input[type="submit"].selected {
+   background-color: var(--dme-bg-2);
+}
+
+#control-panel article, #control-panel input {
+   border-color: var(--dme-bg-2);
+}
+
+#type-case {
+   grid-area: tc;
+   /* overflow-y: scroll; */
+   /* background-color: var(--dme-bg-1); */
+}
+
+#type-case canvas {
+   height: 4em;
+}
+
+.char-container {
+   gap: 0.5em;
+}
+
+.char-container p {
+   height: 1.3em;
+   min-width: 1.3em;
+   width: min-content;
+   border-radius: var(--border-radius);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.char-container.active p {
+   color: var(--dme-bg);
+   background: var(--dme-highlight);
+}
+
+.char-container.active svg .active {
+   fill: var(--dme-highlight);
+}
+
+@media (max-aspect-ratio: 1/1) {
+   /* insert portrait layout here */
+
+   main {
+      grid-template-columns: 1fr 12em;
+      grid-template-rows: 60% 40%;
+      grid-template-areas:
+         "ep cp"
+         "tc cp";
+   }
+
+   #type-case {
+      border-top: var(--border);
+   }
+
+   #canvas-container {
+      height: 100%;
+   }
+}
+
+@media (hover: hover) {
+   button:not(:disabled):not(.disabled), input[type="submit"] {
+      transition: background-color 200ms ease, border-color 200ms ease;
+   }
+
+   button:hover, input[type="submit"]:hover {
+      background-color: var(--dme-bg-2);
+   }
+
+   button.highlighted:hover {
+      background-color: var(--dme-highlight);
+   }
+
+   .plus-minus {
+      border: var(--border);
+      border-color: transparent;
+      border-radius: var(--border-radius);
+   }
+
+   .plus-minus:hover {
+      border-color: var(--dme-bg-2);
+   }
+}
