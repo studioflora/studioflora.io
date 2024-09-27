@@ -4,7 +4,7 @@
 
     const favicon = document.querySelector('#favicon');
     const timerImg = document.querySelector('#counter-img');
-    const timerForm = document.querySelector('.cp');
+    const timerForm = document.querySelector('#counter');
     const hrs = document.querySelector('#hrs');
     const hrsInput = document.querySelector('#hrs-input');
     const mins = document.querySelector('#mins');
@@ -43,10 +43,8 @@
     function checkHrs(){
         if(hrsInput.value == 0){
             hrs.classList.add('dimmed');
-            hrsInput.setAttribute('disabled', '');
         }else{
             hrs.classList.remove('dimmed');
-            hrsInput.removeAttribute('disabled');
         }
     }
 
@@ -196,12 +194,4 @@
     });
 
     resetTimer();
-
-    // help button
-    const info = document.querySelector('#timer-info');
-    const helpBtn = document.querySelector('#help');
-
-    helpBtn.addEventListener('click', function(){
-        info.classList.toggle('info-hidden');
-    })
 }())

@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    console.log('reading js');
+    console.log('reading bbb js');
 
     let gen;
     let angle = 20;
@@ -77,7 +77,10 @@
             newBranchNode.style.transform = `rotate(${(i - 1) * angle + Math.round(Math.random() * angleVar) - 0.5 * angleVar}deg)`;
             newBranchImg.src = `/lab/flora/babysbreath/assets/bb-${stages[newStage - 1][Math.floor(Math.random() * stages[newStage - 1].length)]}`;
             newBranchImg.style.height = '0';
-            newBranchImg.onload = function(){newBranchImg.style.height = `${newBranchImg.naturalHeight / 30}em`};
+            newBranchImg.onload = function(){
+                newBranchImg.style.height = `${newBranchImg.naturalHeight / 13}cqw`;
+            };
+
             currentBranch.appendChild(newBranchNode).appendChild(newBranch).appendChild(newBranchImg);
         }
     }

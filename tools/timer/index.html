@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts -->
@@ -11,20 +10,32 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"> 
 
     <!-- Theme settings -->
-    <meta name="theme-color" content="#131414">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#131414">
-    <meta name="msapplication-TileColor" content="#131414">
+    <meta name="theme-color" content="#080e0c">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#080e0c">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Favicon *UNIQUE FOR TIMER* -->
-    <link id="favicon" rel="shortcut icon" type="image/png" href="assets/favicons/0-0.png" />
-
+    <!-- Favicon -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
 
     <!-- Stylesheets -->
-    <link href="/styles/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/sf-styles.css">
+    <link rel="stylesheet" href="/styles/sf-navbar-styles.css">
+    <link rel="stylesheet" href="/styles/sf-grid-styles.css">
+    <link rel="stylesheet" href="/styles/sf-animations.css">
+    <link rel="stylesheet" href="/styles/dm-display.css">
 
     <!-- Scripts -->
     <script src="/scripts/components.js" defer></script>
+    <script src="/scripts/scroll-script.js" defer></script>
+    <script src="/scripts/text-animate-script.js" defer></script>
+
+    <!-- End universal header -->
+
+    <!-- Favicon *UNIQUE FOR TIMER* -->
+    <link id="favicon" rel="shortcut icon" type="image/png" href="assets/favicons/0-0.png" />
 
     <!-- Timer -->
     <link href="styles.css" rel="stylesheet">
@@ -34,38 +45,33 @@
 </head>
 <body>
     <nav-bar></nav-bar>
-    <main>
-        <div id="timer" class="cp-wrapper">           
-            <h1 class="cp-header">Timer</h1>
-            <div class="cp">
-                <form id="counter" class="flex" autocomplete="off">
+    <main class="grid">
+        <div id="timer" class="grid-6 rounded dropshadow dark">           
+            <h3 class="flex center">Timer</h3>
+            <div class="column gap-m padding-m rounded outline light bg-1">
+                <form id="counter" class="flex gap-m rounded" autocomplete="off">
                     <img id="counter-img" src="assets/favicons/0-0.png">
-                    <div class="counter-input-wrapper">
-                        <div id="hrs">
-                            <input type="text" class="counter-input" id="hrs-input" pattern="[0-9]*$" oninvalid="this.setCustomValidity('Please enter numbers only')"
+                    <div class="flex gap-s">
+                        <div id="hrs" class="flex gap-line">
+                            <input type="text" id="hrs-input" pattern="[0-9]*$" oninvalid="this.setCustomValidity('Please enter numbers only')"
                             oninput="this.setCustomValidity('')">
-                            <label class="counter-label" for="hrs" id="hrs-label">h</label>
+                            <label for="hrs" id="hrs-label">h</label>
                         </div>
-                        <div id="mins">
-                            <input type="text" class="counter-input" id="mins-input" pattern="[0-9]*$" oninvalid="this.setCustomValidity('Please enter numbers only')"
+                        <div id="mins" class="flex gap-line">
+                            <input type="text" id="mins-input" pattern="[0-9]*$" oninvalid="this.setCustomValidity('Please enter numbers only')"
                             oninput="this.setCustomValidity('')">
-                            <label class="counter-label" for="mins" id="mins-label">m</label>
+                            <label for="mins" id="mins-label">m</label>
                         </div>
                     </div>
                     <input type="submit" hidden>
                 </form>
-                <div class="flex">
-                    <div class="btn btn_icon btn_blue btn_large" id="reset"><svg><use href="../../assets/sf-icons.svg#reset-arrow" /></svg></div>
-                    <div class="btn btn_blue btn_span btn_large" id="start">start</div>
+                <div class="flex gap-s">
+                    <button id="reset"><svg><use href="/assets/sf-icons.svg#reset-arrow" /></svg></button>
+                    <button id="start">start</button>
                 </div>
             </div>
-            <div class="button" id="help">?</div>
-        </div> 
-        <div id="timer-info">
-            <p>I built this timer to fulfill one specific need: to be as low-stress as possible.</p>
-            <p>The visual indicator purposefully doesn't show the exact remaining time, and the alarm sound is a gentle cricket chirp and not a startling beep.</p>
-            <p>Also, the indicator works in the tab, so you can see it from other webpages.</p>
         </div>
     </main>
+    <footer-bar></footer-bar>
 </body>
 </html>

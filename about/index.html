@@ -20,9 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <!-- Stylesheets -->
-    <link href="/styles/reset.css" rel="stylesheet">
-    <link href="/styles/sf-styles.css" rel="stylesheet">
-    <link href="/styles/dm-display.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/sf-styles.css">
+    <link rel="stylesheet" href="/styles/sf-navbar-styles.css">
+    <link rel="stylesheet" href="/styles/sf-grid-styles.css">
+    <link rel="stylesheet" href="/styles/sf-animations.css">
+    <link rel="stylesheet" href="/styles/dm-display.css">
 
     <!-- Scripts -->
     <script src="/scripts/components.js" defer></script>
@@ -35,19 +38,18 @@
 </head>
 <body>
     <nav-bar></nav-bar>
-    <main class="spaced">
-        <section class="grid">
-            <img class="grid-6 rounded dropshadow" src="assets/R1-01400-007A.jpg" alt="a portrait of Adam">
-            <article class="grid-6">
-                <h1>Hi, I'm Adam.</h1>
-                <p>I am a multimedia artist, designer, and developer with a focus on interactive experiences for the digital world. I started Studio Flora as a place to share the projects I am working on.</p>
-                <p class="flex">You can find more of my work on <a href="https://www.tiktok.com/@studioflora.io" class="flex"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg>TikTok</a> and <a href="https://www.instagram.com/studioflora.io/" class="flex"><svg><use href="/assets/sf-icons.svg#instagram"/></svg>Instagram</a>.</p>
-                <p>Please enjoy your stay, and check back soon for more :&#41;</p>
-            </article>
-            <article class="grid-6">
-                <a href="/contact" class="flex"><svg><use href="/assets/sf-icons.svg#contact"/></svg>Contact</a>
-            </article>
-        </section>
+    <main class="grid gap-l">
+        <img class="grid-6 rounded dropshadow" src="assets/R1-01400-007A.jpg" alt="a portrait of Adam">
+        <article class="grid-6">
+            <h2>Welcome to Studio Flora</h2>
+            <p>I'm Adam, a designer and developer, and this is where I share my projects.</p>
+            <p>Please enjoy your stay :&#41;</p>
+        </article>
+        <article class="grid-6">
+            <h3>Follow me</h3>
+            <a href="https://www.tiktok.com/@studioflora.io" class="flex"><svg><use href="/assets/sf-icons.svg#tiktok"/></svg>TikTok</a>
+            <a href="https://www.instagram.com/studioflora.io/" class="flex"><svg><use href="/assets/sf-icons.svg#instagram"/></svg>Instagram</a>
+        </article>
     </main>
     <footer-bar></footer-bar>
 </body>

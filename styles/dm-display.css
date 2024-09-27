@@ -93,3 +93,13 @@
         transform: translateX(6px);
     }
 }
+
+@media (hover: hover) {
+    a .dmw-display .dm-dot {
+        transition: background-color var(--ease);
+    }
+
+    a:hover .dmw-display .dm-dot {
+        background-color: var(--hl-0);
+    }
+}

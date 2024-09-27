@@ -28,6 +28,7 @@
 .plantcard img {
     width: auto;
     border-radius: 0;
+    max-width: none;
 }
 
 .plantcard .viewport {

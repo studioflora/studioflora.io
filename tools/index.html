@@ -20,9 +20,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <!-- Stylesheets -->
-    <link href="/styles/reset.css" rel="stylesheet">
-    <link href="/styles/sf-styles.css" rel="stylesheet">
-    <link href="/styles/dm-display.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/sf-styles.css">
+    <link rel="stylesheet" href="/styles/sf-navbar-styles.css">
+    <link rel="stylesheet" href="/styles/sf-grid-styles.css">
+    <link rel="stylesheet" href="/styles/sf-animations.css">
+    <link rel="stylesheet" href="/styles/dm-display.css">
 
     <!-- Scripts -->
     <script src="/scripts/components.js" defer></script>
@@ -35,18 +38,18 @@
 </head>
 <body>
     <nav-bar></nav-bar>
-    <main class="spaced">
-        <section class="grid">
-            <header class="grid-4">
+    <main class="grid">
+        <section class="grid-4 column gap-l">
+            <header>
                 <h1>Tools</h1>
                 <p class="jumbo balanced">More Studio Flora tools coming soon for you to try!</p>
             </header>
             <!-- Timer -->
-            <a href="/tools/timer" class="grid-4 column">
+            <a href="/tools/timer" class="column">
                 <img src="/tools/timer/assets/timer.svg">
-                <div class="flex-spread">
-                    <div class="flex dense">
-                        <h5 class="caps">Zen Timer</h5>
+                <div class="column">
+                    <div class="flex gap-xs">
+                        <h4 class="caps">Zen Timer</h4>
                         <svg><use href="/assets/sf-icons.svg#arrow"/></svg>
                     </div>
                     <p>Tap to launch timer</p>

@@ -1,0 +1,37 @@
+.scroll-in {
+   opacity: 0;
+   transition-delay: 200ms;
+   transition: opacity 400ms ease;
+}
+
+.scroll-show {
+   transition-delay: 100ms;
+   opacity: 1;
+}
+
+.sf-text-wave {
+   opacity: 0;
+   word-wrap: normal;
+}
+
+.sf-text-wave.active {
+   opacity: 1;
+}
+
+.sf-text-wave span {
+   display: inline-block;
+}
+
+.sf-text-wave span span {
+   animation: sf-text-fadein 500ms forwards 1 ease;
+   opacity: 0;
+}
+
+@keyframes sf-text-fadein {
+   from { 
+       opacity: 0;
+   }
+   to { 
+       opacity: 1; 
+   }
+}

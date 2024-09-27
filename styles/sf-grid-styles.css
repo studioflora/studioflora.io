@@ -1,0 +1,33 @@
+.grid {
+   display: grid;
+   /* width: min(100vw - 140px, 1400px); */
+   padding: var(--gap-xl) var(--gap-l);
+   grid-template-columns: repeat(12, minmax(0, 1fr));
+
+   .grid-12 {
+       grid-column: 1 / span 12;
+   }
+
+   >*, .grid-8 {
+       grid-column: 3 / span 8;
+   }
+
+   .grid-6 {
+       grid-column: 4 / span 6;
+   }
+
+   .grid-4 {
+       grid-column: 5 / span 4;
+   }
+
+   .grid-2 {
+       grid-column: 6 / span 2;
+   }
+}
+
+@media (max-aspect-ratio: 2/3) {
+   .grid {
+       display: flex;
+       flex-direction: column;
+   }
+}

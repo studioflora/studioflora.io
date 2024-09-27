@@ -1,0 +1,10 @@
+.grid-palette {
+   display: grid;
+   gap: 0.8rem 1rem;
+   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.swatch {
+   aspect-ratio: 1;
+   padding: var(--gap-l);
+}

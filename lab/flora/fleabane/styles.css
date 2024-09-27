@@ -1,5 +1,6 @@
 #fleabane img {
     height: 0;
+    max-width: none;
     width: auto;
 }
 
