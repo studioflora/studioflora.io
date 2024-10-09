@@ -1,3 +1,9 @@
 [submodule "cloudmachine"]
 	path = lab/cloudmachine
 	url = https://github.com/studioflora/cloudmachine
+[submodule "styles/sf-styles"]
+	path = styles/sf-styles
+	url = https://github.com/studioflora/sf-styles
+[submodule "tools/dot-matrix-font-editor"]
+	path = tools/dot-matrix-font-editor
+	url = https://github.com/studioflora/dot-matrix-font-editor

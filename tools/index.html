@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"> 
 
     <!-- Theme settings -->
-    <meta name="theme-color" content="#080e0c">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#080e0c">
+    <meta name="theme-color" content="#0c1410">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0c1410">
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Favicon -->
@@ -20,8 +20,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/sf-styles.css">
+    <link rel="stylesheet" href="/styles/sf-styles/sf-reset.css">
+    <link rel="stylesheet" href="/styles/sf-styles/sf-styles.css">
     <link rel="stylesheet" href="/styles/sf-navbar-styles.css">
     <link rel="stylesheet" href="/styles/sf-grid-styles.css">
     <link rel="stylesheet" href="/styles/sf-animations.css">
@@ -38,21 +38,26 @@
 </head>
 <body>
     <nav-bar></nav-bar>
-    <main class="grid">
+    <main class="grid gap-xl">
+        <section class="grid-4">
+            <h1>Tools</h1>
+            <p class="jumbo balanced">More Studio Flora tools coming soon for you to try!</p>
+        </section>
         <section class="grid-4 column gap-l">
-            <header>
-                <h1>Tools</h1>
-                <p class="jumbo balanced">More Studio Flora tools coming soon for you to try!</p>
-            </header>
+            <!-- DMFE -->
+            <a href="/tools/dot-matrix-font-editor/" class="grid-4 flex gap-l">
+                <img src="/tools/dot-matrix-font-editor/cover-art.svg" class="app">
+                <div>
+                    <h4 class="caps">Dot Matrix Font Editor</h4>
+                    <i>Create your own dot matrix fonts!</i>
+                </div>
+            </a>
             <!-- Timer -->
-            <a href="/tools/timer" class="column">
-                <img src="/tools/timer/assets/timer.svg">
-                <div class="column">
-                    <div class="flex gap-xs">
-                        <h4 class="caps">Zen Timer</h4>
-                        <svg><use href="/assets/sf-icons.svg#arrow"/></svg>
-                    </div>
-                    <p>Tap to launch timer</p>
+            <a href="/tools/timer" class="grid-4 flex gap-l">
+                <img src="/tools/timer/assets/cover-art.svg" class="app">
+                <div>
+                    <h4 class="caps">Zen Timer</h4>
+                    <i>Tap to launch timer</i>
                 </div>
             </a>
         </section>
