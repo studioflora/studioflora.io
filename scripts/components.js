@@ -1,4 +1,3 @@
-(function(){
 console.log('reading components');
 // Uh oh... who's in here with me?
 
@@ -70,7 +69,6 @@ class Navbar extends HTMLElement {
       }
    }
 }
-
 customElements.define('nav-bar', Navbar);
 
 class FooterBar extends HTMLElement {
@@ -153,6 +151,63 @@ class FooterBar extends HTMLElement {
       }
    }
 }
-
 customElements.define('footer-bar', FooterBar);
-}());
+
+class SFBanner extends HTMLElement {
+   constructor() {
+      super();
+      this.innerHTML += `
+         <style>
+            sf-banner {
+               /* font-size: .9em; */
+               height: 0em;
+               background: var(--hl-0);
+               border-radius: var(--gap-l);
+               display: flex;
+               overflow: hidden;
+               color-scheme: dark;
+               /* z-index: 2; */
+               transition: height var(--out);
+               border-bottom: var(--border);
+            }
+
+            sf-banner a {
+               /* line-height: 2em; */
+               /* padding: 0 1.5em; */
+               font-style: italic;
+               color: var(--fg-0);
+               /* font-weight: 400; */
+               /* top: 0; */
+               /* flex-shrink: 0; */
+               animation: banner 15s forwards linear infinite;
+            }
+
+            @keyframes banner {
+               from {
+                  transform: translateX(-100%);
+               }
+               to {
+                  transform: translateX(0%);
+               }
+            }
+
+            @media (hover: hover) {
+               #banner:hover {
+                  background: var(--accent2);
+               }
+            }
+         </style>
+      `;
+   }
+
+   connectedCallback() {
+      this.message = this.querySelector('a');
+      const displayPercentage = Math.ceil(window.innerWidth / this.message.offsetWidth);
+      for(let i = 0; i < displayPercentage + 3; i++) {
+         console.log(this.message);
+         this.appendChild(this.message);
+      }
+      this.style.height = '2em';
+   }
+}
+customElements.define('sf-banner', SFBanner);
