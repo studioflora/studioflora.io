@@ -84,9 +84,6 @@ footer nav {
 
 /* mobile nav */
 @media all and (max-width: 1000px) {
-   :root {
-      font-size: 16px;
-   }
 
    nav-bar nav {
       flex-direction: column;
