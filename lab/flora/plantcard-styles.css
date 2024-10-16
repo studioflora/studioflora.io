@@ -1,8 +1,7 @@
 @font-face {
     font-family: ao-01;
-    src: url(/lab/assets/custom-fonts/ao-01-Regular.woff2) format("woff2"),
-         url(/lab/assets/custom-fonts/ao-01-Regular.woff) format("woff"),
-         url(/lab/assets/custom-fonts/ao-01-Regular.otf) format("opentype");
+    src: url(/assets/custom-fonts/ao-01-Regular.woff2) format("woff2"),
+         url(/assets/custom-fonts/ao-01-Regular.woff) format("woff");
 }
 
 .plantcard {

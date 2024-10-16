@@ -1,6 +1,21 @@
+@font-face {
+   font-family: sf-dm-01;
+   src: url(/assets/custom-fonts/sf-dm-01.woff2) format("woff2"),
+        url(/assets/custom-fonts/sf-dm-01.woff) format("woff");
+}
+
 body {
    color-scheme: dark;
    background-color: var(--bg-0);
+}
+
+h3 {
+   font-size: 1.75rem;
+}
+
+.dm {
+   font-family: 'sf-dm-01', 'IBM Plex Sans', sans-serif;
+   font-weight: normal;
 }
 
 main {
@@ -68,7 +83,11 @@ footer nav {
 }
 
 /* mobile nav */
-@media all and (max-width: 1000px) { 
+@media all and (max-width: 1000px) {
+   :root {
+      font-size: 16px;
+   }
+
    nav-bar nav {
       flex-direction: column;
       align-items: normal;
@@ -119,5 +138,9 @@ footer nav {
 
    .hide-mobile {
       display: none;
+   }
+
+   h3 {
+      font-size: 1.25rem;
    }
 }
