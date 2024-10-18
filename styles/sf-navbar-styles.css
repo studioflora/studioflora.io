@@ -140,4 +140,8 @@ footer nav {
    h3 {
       font-size: 1.25rem;
    }
+
+   .app {
+      max-width: 4rem;
+   }
 }
