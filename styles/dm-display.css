@@ -1,3 +1,47 @@
+/* SVG styles */
+:root {
+    /* CAUTION: theres a hardcoded copy of this in the dm-display component */
+    --flip-time: 160ms;
+}
+
+dm-display #display {
+    max-height: 10em;
+    height: max-content;
+    width: fit-content;
+}
+
+#display circle, #display rect {
+    fill: var(--bg-1);
+    /* transition: fill 60ms; */
+    /* transition: transform var(--flip-time) ease-in-out, fill 0ms; */
+    /* transition-delay: 0ms, calc(var(--flip-time) / 2); */
+    /* transform: rotate3D(0, 0, 0, 180deg); */
+}
+
+#display .active { 
+    fill: var(--fg-alt-0);
+    z-index: 2;
+    opacity: 1;
+}
+
+dm-display .hidden {
+    display: none;
+}
+
+dm-display input[type="number"] {
+    width: 3rem;
+}
+
+#close-display-controls-btn {
+    border-radius: var(--gap-xs);
+    height: 1.25em;
+    aspect-ratio: 1;
+    justify-content: center;
+    padding: 0;
+}
+
+/* For animated logo; due for update */
+
 .dm-display {
     /* margin-top: 0.1em; */
     margin-left: 0.1em;
@@ -30,8 +74,6 @@
 .dm-dot.active {
     opacity: 1;
 }
-
-/* DM-Wave styles */
 
 #monogram-footer {
     display: flex;

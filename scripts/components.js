@@ -1,5 +1,9 @@
-console.log('reading components');
+console.log('reading sf components');
 // Uh oh... who's in here with me?
+const svgNS = 'http://www.w3.org/2000/svg';
+const gridSize = 10;
+let prevMessageFrame = [];
+let frameInterval;
 
 function createDiv(className){
    let newDiv = document.createElement('div');
@@ -204,7 +208,6 @@ class SFBanner extends HTMLElement {
       this.message = this.querySelector('a');
       const displayPercentage = Math.ceil(window.innerWidth / this.message.offsetWidth);
       for(let i = 0; i < displayPercentage + 3; i++) {
-         console.log(this.message);
          this.appendChild(this.message);
       }
       this.style.height = '2em';
