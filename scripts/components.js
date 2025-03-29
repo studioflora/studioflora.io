@@ -16,18 +16,18 @@ class Navbar extends HTMLElement {
       super();
       this.innerHTML = `
          <nav class="dropshadow">
-            <svg class="corner"><use href="/styles/sf-styles/sf-icons.svg#corner"/></svg>
-            <svg class="corner"><use href="/styles/sf-styles/sf-icons.svg#corner"/></svg>
+            <svg class="corner"><use href="/sf-core/sf-icons.svg#corner"/></svg>
+            <svg class="corner"><use href="/sf-core/sf-icons.svg#corner"/></svg>
             <div id="mobile-nav" class="flex spread padding-s">
                <a href="/" class="logo"><i>studio flora</i></a>
-               <a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/styles/sf-styles/sf-icons.svg#openmenu"/></svg></a>
+               <a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/sf-core/sf-icons.svg#openmenu"/></svg></a>
             </div>
             <ul id="menu" class="flex closed gap-m">
                <li><a href="/tools">Tools</a></li>
                <li><a href="/">Gallery</a></li>
                <li><a href="/about">About</a></li>
-               <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/styles/sf-styles/sf-icons.svg#instagram"/></svg></a></li>
-               <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/styles/sf-styles/sf-icons.svg#tiktok"/></svg></a></li>
+               <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/sf-core/sf-icons.svg#instagram"/></svg></a></li>
+               <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/sf-core/sf-icons.svg#tiktok"/></svg></a></li>
             </ul>
          </nav>
       `
@@ -55,7 +55,7 @@ class Navbar extends HTMLElement {
       });
 
       function openMenu(){
-         toggleMenuImg.setAttribute('href', '/styles/sf-styles/sf-icons.svg#close');
+         toggleMenuImg.setAttribute('href', '/sf-core/sf-icons.svg#close');
          menu.classList.remove('closed');
          menu.style.height = `${menuLis * 2.5}rem`;
          main.classList.add('unfocus');
@@ -64,7 +64,7 @@ class Navbar extends HTMLElement {
       }
 
       function closeMenu(){
-         toggleMenuImg.setAttribute('href', '/styles/sf-styles/sf-icons.svg#openmenu');
+         toggleMenuImg.setAttribute('href', '/sf-core/sf-icons.svg#openmenu');
          menu.classList.add('closed');
          menu.style.height = '0';
          main.classList.remove('unfocus');
@@ -91,9 +91,9 @@ class FooterBar extends HTMLElement {
                </ul>
                <ul id="footer-socials">
                   <li class="hide-mobile">—</li>
-                  <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/styles/sf-styles/sf-icons.svg#tiktok"/></svg></a></li>
-                  <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/styles/sf-styles/sf-icons.svg#instagram"/></svg></a></li>
-                  <li><a href="https://github.com/studioflora"><svg><use href="/styles/sf-styles/sf-icons.svg#github"/></svg></a></li>
+                  <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/sf-core/sf-icons.svg#tiktok"/></svg></a></li>
+                  <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/sf-core/sf-icons.svg#instagram"/></svg></a></li>
+                  <li><a href="https://github.com/studioflora"><svg><use href="/sf-core/sf-icons.svg#github"/></svg></a></li>
                   <li class="hide-mobile">—</li>
                </ul>
                <a href="/">Studio Flora © 2024</a>
