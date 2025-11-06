@@ -26,8 +26,9 @@ class Navbar extends HTMLElement {
                <li><a href="/tools">Tools</a></li>
                <li><a href="/">Gallery</a></li>
                <li><a href="/about">About</a></li>
-               <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/sf-core/sf-icons.svg#instagram"/></svg></a></li>
                <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/sf-core/sf-icons.svg#tiktok"/></svg></a></li>
+               <li><a href="https://www.youtube.com/@studiofloraio"><svg><use href="/sf-core/sf-icons.svg#youtube"/></svg></a></li>
+               <li><a href="https://ko-fi.com/studioflora"><svg><use href="/sf-core/sf-icons.svg#ko-fi"/></svg></a></li>
             </ul>
          </nav>
       `
@@ -88,15 +89,17 @@ class FooterBar extends HTMLElement {
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About</a></li>
                   <li><a href="mailto:&#097;&#100;&#097;&#109;&#111;&#118;&#101;&#114;&#109;&#101;&#101;&#114;&#064;&#115;&#116;&#117;&#100;&#105;&#111;&#102;&#108;&#111;&#114;&#097;&#046;&#105;&#111;">Contact</a></li>
+                  <li><a style="gap: 0.25em" href="https://ko-fi.com/studioflora"><svg><use href="/sf-core/sf-icons.svg#ko-fi"/></svg>Donate</a></li>
                </ul>
                <ul id="footer-socials">
                   <li class="hide-mobile">—</li>
                   <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/sf-core/sf-icons.svg#tiktok"/></svg></a></li>
+                  <li><a href="https://www.youtube.com/@studiofloraio"><svg><use href="/sf-core/sf-icons.svg#youtube"/></svg></a></li>
                   <li><a href="https://www.instagram.com/studioflora.io/"><svg><use href="/sf-core/sf-icons.svg#instagram"/></svg></a></li>
                   <li><a href="https://github.com/studioflora"><svg><use href="/sf-core/sf-icons.svg#github"/></svg></a></li>
                   <li class="hide-mobile">—</li>
                </ul>
-               <a href="/">Studio Flora © 2024</a>
+               <a href="/">Studio Flora © 2025</a>
             </nav>
          </footer>
       `

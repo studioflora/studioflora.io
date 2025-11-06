@@ -122,6 +122,9 @@ footer nav {
 
    #menu li {
       height: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       &:first-of-type {
          border-top: var(--border);
