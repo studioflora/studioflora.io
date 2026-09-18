@@ -8,7 +8,7 @@
     let maxBranches = 7;
     let maxGens = 10;
     let minGens = 6;
-    let directory = '/lab/flora/thyme/assets';
+    let directory = '/lab/conservatory/thyme/assets';
 
     let gens;
     let branchAngles;

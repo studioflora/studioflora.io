@@ -32,7 +32,7 @@
     function createImgDiv(className, type, number){
         const newDiv = createDiv(className);
         const newImg = document.createElement('img');
-        newImg.src = `../../lab/flora/fleabane/assets/${type}-${number}.png`;
+        newImg.src = `../../lab/conservatory/fleabane/assets/${type}-${number}.png`;
         newImg.onload = function(){newImg.style.height = `${newImg.naturalHeight / 35}em`};
         newDiv.style.animationDelay = `-${Math.round(Math.random() * 200) / 30 + 1 * gen}s`;
         newDiv.appendChild(newImg);

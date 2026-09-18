@@ -23,8 +23,6 @@ class Navbar extends HTMLElement {
                <a href="#" id="toggle-menu"><svg><use id="toggle-menu-img" href="/sf-core/sf-icons.svg#openmenu"/></svg></a>
             </div>
             <ul id="menu" class="flex closed gap-m">
-               <li><a href="/tools">Tools</a></li>
-               <li><a href="/">Gallery</a></li>
                <li><a href="/about">About</a></li>
                <li><a href="https://www.tiktok.com/@studioflora.io"><svg><use href="/sf-core/sf-icons.svg#tiktok"/></svg></a></li>
                <li><a href="https://www.youtube.com/@studiofloraio"><svg><use href="/sf-core/sf-icons.svg#youtube"/></svg></a></li>
@@ -88,7 +86,6 @@ class FooterBar extends HTMLElement {
                <ul>
                   <li><a href="/">Home</a></li>
                   <li><a href="/about">About</a></li>
-                  <li><a href="mailto:&#097;&#100;&#097;&#109;&#111;&#118;&#101;&#114;&#109;&#101;&#101;&#114;&#064;&#115;&#116;&#117;&#100;&#105;&#111;&#102;&#108;&#111;&#114;&#097;&#046;&#105;&#111;">Contact</a></li>
                   <li><a style="gap: 0.25em" href="https://ko-fi.com/studioflora"><svg><use href="/sf-core/sf-icons.svg#ko-fi"/></svg>Donate</a></li>
                </ul>
                <ul id="footer-socials">
@@ -99,10 +96,11 @@ class FooterBar extends HTMLElement {
                   <li><a href="https://github.com/studioflora"><svg><use href="/sf-core/sf-icons.svg#github"/></svg></a></li>
                   <li class="hide-mobile">—</li>
                </ul>
-               <a href="/">Studio Flora © 2025</a>
+               <a href="/">Studio Flora © 2026</a>
             </nav>
          </footer>
       `
+      // <li><a href="mailto:&#097;&#100;&#097;&#109;&#111;&#118;&#101;&#114;&#109;&#101;&#101;&#114;&#064;&#115;&#116;&#117;&#100;&#105;&#111;&#102;&#108;&#111;&#114;&#097;&#046;&#105;&#111;">Contact</a></li>
    }
 
    connectedCallback() {

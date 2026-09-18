@@ -46,53 +46,50 @@
     <link href="/lab/conservatory/fleabane/styles.css" rel="stylesheet">
     <script src="/lab/conservatory/fleabane/script.js" defer></script>
 
+    <!-- Thyme -->
+    <link href="/lab/conservatory/thyme/styles.css" rel="stylesheet">
+    <script src="/lab/conservatory/thyme/script.js" defer></script>
+
     <!-- Seagrass -->
     <link href="/lab/conservatory/seagrass/styles.css" rel="stylesheet">
     <script src="/lab/conservatory/seagrass/script.js" defer></script>
 
-    <!-- Timer -->
-    <link href="/tools/timer/styles.css" rel="stylesheet">
-
-    <title>Studio Flora</title>
+    <title>The Conservatory</title>
 </head>
 <body>
     <nav-bar></nav-bar>
     <main class="grid gap-xl">
-        <!-- DMFE -->
-        <a href="/tools/dot-matrix-font-editor/" class="flex grid-6 gap-l">
-            <img src="/tools/dot-matrix-font-editor/cover-art.svg" class="app">
-            <div>
-                <h3 class="dm text-balance">Dot Matrix Font Editor</h3>
-                <p>Create your own dot matrix fonts!</p>
-            </div>
-        </a>
-        <article class="grid-12 column gap-l">
-            <iframe src="/lab/cloudmachine/preview.html" title="cloudmachine" class="rounded dropshadow" style="width: 100%; height: 100%; aspect-ratio: 16/9;"></iframe>
-            <div>
-                <h3 class="dm">Cloudmachine</h3>
-                <p>Tap to generate new clouds!</p>
-            </div>
+        <article class="grid-8 column gap-l">
+            <h3 class="dm text-balance">Welcome to the Conservatory</h3>
+            <p>Currently this page houses collection of plant animations I made with JS and CSS, with help from my partner Lula.</p>
         </article>
-        
-        <!-- Timer -->
-        <a href="/tools/timer" class="flex grid-6 gap-l">
-            <img src="/tools/timer/assets/cover-art.svg" class="app">
-            <div>
-                <h3 class="dm">Tab Timer</h3>
-                <p>A low-stress visual task timer</p>
+        <article class="grid-6 column gap-l">
+            <!-- Babysbreath -->
+            <div class="plantcard dropshadow" id="babysbreath">
+                <div class="viewport">
+                    <div class="gen0 stage1"></div>
+                </div>
+                <h5>Baby's-breath</h5>
             </div>
-        </a>
-
-        <!-- Flowers -->
-        <a href="/lab/conservatory" class="grid-6 column gap-l">
+            <!-- Fleabane -->
+            <div class="plantcard dropshadow" id="fleabane">
+                <div class="viewport">
+                    <div class="gen0"></div>
+                </div>
+                <h5>Fleabane</h5>
+            </div>
             <!-- Seagrass -->
             <div class="plantcard dropshadow" id="seagrass">
                 <div class="viewport">
                     <div class="planter"></div>
                 </div>
-                <h5>Conservatory</h5>
+                <h5>Seagrass</h5>
             </div>
-        </a>
+        </article>
+        <article class="grid-8">
+            <h3 class="dm"><a href="/lab/quarantine">Quarantine</a></h3>
+            <p>For unstable plants</p>
+        </article>
     </main>
     <footer-bar></footer-bar>
 </body>

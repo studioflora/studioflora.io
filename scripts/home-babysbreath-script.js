@@ -77,7 +77,7 @@
             newBranch.classList.add(`stage${newStage}`);
             newBranch.style.animationDelay = `-${Math.round(Math.random() * 200) / 30 + 1 * gen}s`;
             newBranchNode.style.transform = `rotate(${(i - 1) * angle + Math.round(Math.random() * angleVar) - 0.5 * angleVar + 6}deg)`;
-            newBranchImg.src = `/lab/flora/babysbreath/assets/bb-${stages[newStage - 1][Math.floor(Math.random() * stages[newStage - 1].length)]}`;
+            newBranchImg.src = `/lab/conservatory/babysbreath/assets/bb-${stages[newStage - 1][Math.floor(Math.random() * stages[newStage - 1].length)]}`;
             newBranchImg.style.height = '0';
             newBranchImg.onload = function(){newBranchImg.style.height = `${newBranchImg.naturalHeight / 30}em`};
             currentBranch.appendChild(newBranchNode).appendChild(newBranch).appendChild(newBranchImg);

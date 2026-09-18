@@ -65,7 +65,7 @@
                         newLeaf.classList.add('leaf');
                         newLeaf.style.height = `${stalkHeight[i] * leafSize / 3}px`;
                         newLeaf.style.width = `${stalkHeight[i] * leafSize}px`;
-                        newLeaf.innerHTML = `<use href="/lab/flora/kelp/assets/leaves.svg#leaf${getValue(1, 6)}" fill="hsla(${200 - 70 * (stalkHeight[i] - stalkMin) / stalkRange}, ${60 + 30 * (stalkHeight[i] - stalkMin) / stalkRange}%, ${20 + 10 * (stalkHeight[i] - stalkMin) / stalkRange}%, 0.93)"/>`; 
+                        newLeaf.innerHTML = `<use href="/lab/conservatory/kelp/assets/leaves.svg#leaf${getValue(1, 6)}" fill="hsla(${200 - 70 * (stalkHeight[i] - stalkMin) / stalkRange}, ${60 + 30 * (stalkHeight[i] - stalkMin) / stalkRange}%, ${20 + 10 * (stalkHeight[i] - stalkMin) / stalkRange}%, 0.93)"/>`; 
                         newLeaf.style.bottom = `${stalkHeight[i] / leavesPerSeg * k - getValue(0, stalkHeight[i]) / 15}px`;
                         newLeaf.style.left = `${stalkHeight[i] / 20}px`;
                         newLeaf.style.animationDelay = `${-0.4 * (10 - j) - stalkDelay - 4 + getValue(0, 20) / 10}s`;                   
